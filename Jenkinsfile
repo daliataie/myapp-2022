@@ -35,7 +35,7 @@ pipeline{
             steps{
                timeout(time: 1, unit: 'HOURS') {
                 //    For this to work, we should add webhook in sonar
-                //    http://172.31.39.227:8080/sonarqube-webhook/
+                //    http://172.31.33.203:8080/sonarqube-webhook/
                     script{
                         def qg = waitForQualityGate()
                         if (qg.status != 'OK') {
